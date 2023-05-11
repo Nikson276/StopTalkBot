@@ -1,4 +1,5 @@
 Nаme: Stop_talking_bot
+Link: https://t.me/Stop_Talking_bot
 
 Приветствую! 
 Я бот для чатов, ругаюсь в ответ на аудиосообщения. 
@@ -10,6 +11,8 @@ Nаme: Stop_talking_bot
 /rude - грубый режим
 /polite - вежливый режим
 /guard - молча удаляю все аудиосообщения из чата (требуются права админа на удаление сообщений)
+
+**Features comming soon:**
 /rating - доска позора войсеров
 Для выбора режима введите соответствующую команду (только админ чата)
 
@@ -17,12 +20,3 @@ Nаme: Stop_talking_bot
 /hatevideo_on - ругаюсь также на видеосообщения
 /hatevideo_off - ругаюсь только аудио (по умолчанию)
 
-
-Для работы в режиме разработки, необходимо создать в корневой папке файл dev.env
-в нем нужно создать две переменные: 
-Note: group ids or account ids can be retrieved with @username_to_id_bot
-BOT_TOKEN="<token>"           # bot token, from @BotFather
-BOT_OWNERS="<user_id>"        # user_id list separated with comma
-
-
-Для деплоя необходимо в создать аналогичные переменне окружения и заполнить их своими данными.
