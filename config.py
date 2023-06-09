@@ -1,19 +1,20 @@
 """_summary_
 Для использования dotenv нужно убедиться, что установлен модуль python-dotenv
+
 Данный файл конфигурации позволяет при локальном запуске в режиме разработки, 
 запускать бота с одними значениями (из файла dev.env).
 
 А когда проект будет размещен на сервере, этот файл не понадобиться.
 Вместо него необходимо добавить в вирт окружение необходимые переменные
 'BOT_TOKEN' = <значение> без ковычек
-'BOT_OWNERS' = <значение>, <значение> и т д без ковычек.
+'BOT_OWNERS' = <значение> без ковычек.
 """
 
-import dotenv
+from dotenv import load_dotenv
 import os
 
 # Find .env file with os variables
-dotenv.load_dotenv("dev.env")
+load_dotenv("dev.env")
 
 # retrieve config variables
 try:

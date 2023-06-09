@@ -78,7 +78,7 @@ target/
 celerybeat-schedule
 
 # dotenv
-dev.env
+*.env
 
 # virtualenv
 venv/
@@ -185,3 +185,4 @@ fabric.properties
 # .idea
 
 text.py
+test_db.py

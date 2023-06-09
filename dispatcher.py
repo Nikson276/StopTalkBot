@@ -12,6 +12,8 @@ if not config.BOT_TOKEN:
     exit("No token provided")
 
 # init
+# PROXY_URL = "http://proxy.server:3128"
+# bot = Bot(proxy=PROXY_URL, token=config.BOT_TOKEN, parse_mode="HTML")
 bot = Bot(token=config.BOT_TOKEN, parse_mode="HTML")
 dp = Dispatcher(bot)
 

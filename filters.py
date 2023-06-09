@@ -13,7 +13,6 @@ class IsOwnerFilter(BoundFilter):
         self.is_owner = is_owner
 
     async def check(self, message: types.Message):
-        print("Запустили check функцию из файла filters.py")
         return message.from_user.id in config.BOT_OWNERS
 
 

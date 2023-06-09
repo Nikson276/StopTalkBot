@@ -1,7 +1,12 @@
 from aiogram import executor
 from dispatcher import dp
 import handlers
+from db import BotDB
 
+# init bd connection
+BotDB = BotDB('admin_data.db')
 
 if __name__ == "__main__":
-    executor.start_polling(dp, skip_updates=True)  # Don't skip updates, if your bot will process payments or other important stuff
+    executor.start_polling(dp, skip_updates=True)
+    # Don't skip updates,
+    # if your bot will process payments or other important stuff
