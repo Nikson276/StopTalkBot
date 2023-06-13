@@ -89,7 +89,7 @@ async def video_handler(message: types.VideoNote):
         catatog = DATABASE["navigator"][key]
 
         # получим список ответов, и выберем случайное
-        text = choice(list(DATABASE[catatog].values()))        
+        text = choice(list(DATABASE[catatog].values()))
         await message.reply(text)
         # Запись в доску позора (Рейтинг)
         BotDB.upd_user_rating(chat_id, message.from_id, rate='video_score')

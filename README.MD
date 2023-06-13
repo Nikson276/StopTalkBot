@@ -1,5 +1,5 @@
 Nаme: Stop_talking_bot
-Version: 0,5 Beta
+Version: 2.0 Beta
 Link: https://t.me/Stop_Talking_bot
 
 Приветствую! 

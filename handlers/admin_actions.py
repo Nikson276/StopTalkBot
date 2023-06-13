@@ -43,7 +43,7 @@ def get_id(message: types.Message) -> int:
           message.chat.type == 'supergroup'):
         output = message.chat.shifted_id
     return output
-        
+
 
 # Welcome function
 @dp.message_handler(is_admin=True,
@@ -63,8 +63,7 @@ async def send_welcome(message: types.Message):
     if message.text.startswith(cmd_variants[0]):
         # Добавляем наш чат в БД, если его там нет.
         # Если есть, ставим настроки по умолчанию
-        print(f"LOG: Добовляем чат {chat_id}"
-              f"в бд: {BotDB.upd_group(chat_id,)}")
+        BotDB.upd_group(chat_id,)
     # Если help то просто выведем подсказку
     await message.reply(WELCOME_TEXT)
 
@@ -107,7 +106,7 @@ async def change_settings(message: types.Message):
                )
     # set variables with current value
     try:
-        act_type = BotDB.get_group_settings(chat_id)[0]    
+        act_type = BotDB.get_group_settings(chat_id)[0]
         video_hate = BotDB.get_group_settings(chat_id)[1]
     except TypeError:
         await message.answer("Я еще не подключен к вашему чату. "
@@ -127,7 +126,7 @@ async def change_settings(message: types.Message):
     elif message.text.startswith(sub_cmd[1]):
         video_hate = int(False)
 
-    # SQL DB integration_____________________    
+    # SQL DB integration_____________________
     # Выполним изменение настроек в БД
     print(f"LOG: Обновляем настройки группы {chat_id} "
           f"в бд: {BotDB.upd_group(chat_id, act_type, video_hate)}")
